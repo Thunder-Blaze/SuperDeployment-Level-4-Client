@@ -53,7 +53,9 @@ const RegisterPage = () => {
     const URL = `${process.env.REACT_APP_BACKEND_URL}/api/register`
 
     try {
-        const response = await axios.post(URL,data)
+        const response = await axios.post(URL,data,{
+          withCredentials : true
+        })
         console.log("response",response)
 
         toast.success(response.data.message)
