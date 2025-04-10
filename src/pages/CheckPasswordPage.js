@@ -31,6 +31,8 @@ const CheckPasswordPage = () => {
         {
           userId: user._id,
           password,
+        },{
+          withCredentials: true,
         }
       )
 

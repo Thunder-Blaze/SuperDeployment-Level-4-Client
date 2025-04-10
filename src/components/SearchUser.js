@@ -18,6 +18,8 @@ const SearchUser = ({onClose}) => {
                 setLoading(true)
                 const response = await axios.post(URL,{
                     search : search
+                }, {
+                    withCredentials : true
                 })
                 setLoading(false)
     
